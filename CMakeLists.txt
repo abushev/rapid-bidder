@@ -61,9 +61,7 @@ if (WIN32)
     link_directories(${Boost_LIBRARY_DIRS})
 endif(WIN32)
 
-
 add_subdirectory(framework)
-
 if(ENABLE_REDISCLIENT)
     include(ExternalProject)
   
@@ -75,7 +73,6 @@ if(ENABLE_REDISCLIENT)
         DOWNLOAD_COMMAND ""
     )
 endif()
-
 add_subdirectory(exchange_server)
 add_subdirectory(bidders)
 add_subdirectory(loaders)
